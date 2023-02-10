@@ -15,11 +15,6 @@
 			<button type="submit" class="btn btn-primary">Zippit</button>
 		</h3>
 	</form>
-	<div th:each="response : ${res}">
-		<form method="post" th:action="@{/download}" enctype="multipart/form-data">
-		<h3><button type="button" class="btn btn-success">Download Zip File</button></h3>
-		</form>
-	</div>
 </body>
 
 </html>

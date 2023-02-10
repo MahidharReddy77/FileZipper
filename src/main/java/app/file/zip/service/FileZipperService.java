@@ -21,7 +21,7 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 public class FileZipperService {
 
-	public String convertToZipFile(MultipartFile multipartFile) throws IOException {
+	public File convertToZipFile(MultipartFile multipartFile) throws IOException {
 		log.info("Entered into conversion method....");
 		File file = convertFile(multipartFile);
 		String originalFileName = multipartFile.getOriginalFilename();
@@ -40,11 +40,10 @@ public class FileZipperService {
 	    zos.close();
 	    fis.close();
 	    File zipFile = new File(fileName+".zip");
-	    downLoadZipeFile(zipFile);
-		return "Success";
+		return zipFile;
 	}
 
-	private ResponseEntity<Object> downLoadZipeFile(File zippedFile) throws IOException {
+	public ResponseEntity<Object> downLoadZipeFile(File zippedFile) throws IOException {
 		InputStreamResource res = new InputStreamResource(new FileInputStream(zippedFile));
 		HttpHeaders headers = new HttpHeaders();
 		headers.add("Content-Disposition", String.format("attachment;filename=\"%s\"", zippedFile.getName()));
