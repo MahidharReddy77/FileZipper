@@ -1,20 +1,65 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js-menubar" xmlns:th="http://www.thymeleaf.org">
-
-<head>
-	<meta charset="ISO-8859-1">
-	<title>File Zipper</title>
-</head>
-<body>
-	<div>
-		<p>Welcome to the File Zipper :)</p>
-	</div>
-	<form method="post" th:action="@{/file}" enctype="multipart/form-data">
-		<h3>
-			<input type="file" name="file" class="form-control-file" style="width:25%">
-			<button type="submit" class="btn btn-primary">Zippit</button>
-		</h3>
-	</form>
-</body>
-
+<html lang="en" dir="ltr" class="no-js-menubar" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <title>File Zipper</title>
+        <meta >
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+			*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+nav{
+    background: deepskyblue;
+    height: 80px;
+    width: 100%;
+}
+img{
+    height: 80px;
+}
+label{
+    color: white;
+    font-size: 35px;
+    line-height: 10px;
+    padding: 10 100px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+label p{
+    display: inline-block;
+    margin-right: 20px;
+    align-self: first baseline;
+}
+.file{
+   padding: 10%;
+    font: bold 10px;
+}
+button{
+    margin-left: 100%;
+}
+		</style>
+			
+    </head>
+    <body>
+        <nav>
+            <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn-icons-png.flaticon.com%2F512%2F202%2F202312.png&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Ffree-icon%2Fzip_14111846.htm&tbnid=lv-G4jCVqBmJkM&vet=12ahUKEwi03evOiJD9AhVPKbcAHelmBmwQMygdegUIARCaAg..i&docid=1ovBmnplh-vrnM&w=512&h=512&itg=1&q=zip%20file%20logo&ved=2ahUKEwi03evOiJD9AhVPKbcAHelmBmwQMygdegUIARCaAg"></label>
+            <label><p>File Zipper</p></label>
+        </nav>
+        <div>
+            <form method="post" th:action="@{/file}" enctype="multipart/form-data" >
+                <div class="file">
+                    <input type="file" name="file" class="form-control-file" style="width:25%">
+                    <button type="submit" class="btn btn-primary">Zip file</button>
+                </div>
+            </form>
+        </div>
+    </body>
 </html>
