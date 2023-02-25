@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js-menubar" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" dir="ltr" class="no-js-menubar" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<meta charset="ISO-8859-1">
+	<meta charset="utf-8">
 	<title>File Zipper</title>
+	<meta>
+	<link rel="stylesheet" href="/asserts/css/index.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+
 <body>
-	<div>
-		<p>Welcome to the File Zipper :)</p>
-	</div>
-	<form method="post" th:action="@{/file}" enctype="multipart/form-data">
-		<h3>
-			<input type="file" name="file" class="form-control-file" style="width:25%">
-			<button type="submit" class="btn btn-primary">Zippit</button>
-		</h3>
-	</form>
+	<nav>
+		<img src="/asserts/images/zip.png" alt="zip">
+		<span><h3>FILE ZIPPER</h3><h6>You can zip any file here.</h6></span>
+	</nav>
+	<!--<div class="body-panel">
+		<div class="body-panel-main">
+			<img src="/asserts/images/close-mouth-zip.gif" alt="zipgif">
+		</div>
+	</div>-->
 </body>
 
 </html>
