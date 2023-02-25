@@ -1,0 +1,19 @@
+*{
+	background: white;
+	padding: 0%;
+}
+nav{
+	padding: 0%;
+	background: rgb(0, 128, 192);
+	height: 80px;
+	width: 90px;
+}
+nav img{
+	border-radius: 50%;
+	height: 80px;
+	width: 80px;
+}
+div img{
+	align-items: center;
+	height: 50px;
+}
